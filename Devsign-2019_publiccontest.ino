@@ -6,6 +6,7 @@
 
 #include "pH.h"
 #include "Temperature.h"
+#include "wifi.h"
 
 #define P_SEPERATE() "-----------------------------------\n";
 #define P_SEPERATE_TWO_LINES() "-----------------------------------\n\n";
@@ -17,8 +18,12 @@ int sendTime;
 // the setup function runs once when you press reset or power the board
 void setup() {
 	Serial.begin(9600);
-	Serial.println("Temperature!");
-	Serial.println("pH!");
+	Serial1.begin(9600);
+	Serial.println("Temperature");
+	Serial.println("pH");
+
+	wifi_setup();
+	wifi_test();
 }
 
 // the loop function runs over and over again until power down or reset

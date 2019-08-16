@@ -1,3 +1,9 @@
+/*
+ Name:		Temperature.ino
+ Created:	2019-08-14 ¿ÀÈÄ 3:36:43
+ Author:	Hyuntaek Lim
+*/
+
 #include "Temperature.h"
 
 double getTemperature(void) {
